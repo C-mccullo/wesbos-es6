@@ -62,16 +62,28 @@
 
   <script>
       const box = document.querySelector('.box');
+
+      // 🔥🔥🔥 In arrow functions, the value of "this" is not rebound to the scope of the function.
+      // It is inherited from the parent scope 🔥🔥🔥
+
+      // box.addEventListener('click', () => {
+      //   console.log(this);
+      // })
+
       box.addEventListener('click', function() {
         let first = 'opening';
         let second = 'open';
-
+        // 👇 Cool!!! ⛄️⛄️⛄️
         if(this.classList.contains(first)) {
           // switch them
           [first, second] = [second, first];
         }
 
         this.classList.toggle(first);
+
+        // setTimeout is considered entering a new function which is not bound
+        // to anything, using regular function will result in a "this" value of the parent Window
+        // Sooo... can instead of binding value of this to a variable, use arrow function! 
         setTimeout(() => {
           this.classList.toggle(second);
         }, 250);

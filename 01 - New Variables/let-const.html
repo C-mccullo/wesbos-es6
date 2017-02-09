@@ -9,12 +9,16 @@
   const key = 'abc123';
   let points = 50;
   let winner = false;
+  
 
+  // 🔥🔥🔥 const is not entirely immutable, a const variable cannot be 
+  // reassigned but the properties of the variable can be updated 🔥🔥🔥 //
   const person = {
     name: 'Wes',
     age: 28
   }
-
+  
+  // Object.freeze is a method that allows you to make an object and all properties immutable 
   const wes = Object.freeze(person);
 
 </script>

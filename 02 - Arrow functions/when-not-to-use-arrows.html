@@ -12,7 +12,7 @@
 <button id="pushy">Push Me</button>
 
 <script>
-  // When you really need `this`
+  // When you really need `this` (will be bound to const button)
   const button = document.querySelector('#pushy');
   button.addEventListener('click', function() {
     console.log(this);
@@ -20,6 +20,8 @@
   });
 
   // When you need a method to bind to an object
+  // 🔥🔥🔥 When you have a method on an object you can 
+  // just type in the name of the method ending with parentheses 🔥🔥🔥
   const person = {
     points: 23,
     score() {
@@ -36,14 +38,16 @@
     }
   }
 
-  const beemer = new Car('bmw', 'blue');
-  const subie = new Car('Subaru', 'white');
+  const beemer = new Car('bmw', 'white');
+  const subie = new Car('Subaru', 'blue');
 
+  // We need the keyword 'this' so can't be an arrow function! 
   Car.prototype.summarize = function() {
      return `This car is a ${this.make} in the colour ${this.colour}`;
   };
 
-  // When you need arguments object
+  // When you need arguments object, need to use a regular function
+  // you will not get an arguments object when using arrow functions
   const orderChildren = function() {
     const children = Array.from(arguments);
     return children.map((child, i) => {

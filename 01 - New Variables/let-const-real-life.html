@@ -6,12 +6,24 @@
 </head>
 <body>
 <script>
+
+  // 👇 This is an IIFE 
+
+  // (function() {
+  //   var name = 'wes';
+  //   console.log(name);
+  // })();
+
   {
     const name = 'wes';
     console.log(name);
   }
-
-  for(let i = 0; i < 10; i++) {
+  
+  // using var instead of let will result in the variable i being over written every time that the loop runs,
+  // after 1 second the loop with be done and will result in a console log value of just 10;
+  // Let is block scoped so after loop is run you will receive the log for each iteration of i
+  
+  for (let i = 0; i < 10; i++) {
     console.log(i);
     setTimeout(function() {
       console.log('The number is ' + i);
