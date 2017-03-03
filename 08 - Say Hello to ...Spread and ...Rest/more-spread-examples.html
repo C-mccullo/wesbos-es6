@@ -11,8 +11,13 @@
     <p>Randy</p>
   </div>
 <script>
+  // can be used to make an array from a NodeList
   const people = Array.from(document.querySelectorAll('.people p'));
   const names = people.map((person) => person.textContent );
+  
+  // ❄️ COULD ALSO USE SPREAD ❄️
+  const spreadPeople = [...document.querySelectorAll('people p')];
+  // console.log(spreadPeople);
 
   const deepDish = {
     pizzaName: 'Deep Dish',

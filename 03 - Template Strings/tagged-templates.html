@@ -11,7 +11,10 @@
 </head>
 <body>
 <script>
+  // "tagging" a template literal is the ability to pass a template literal through a function to determine how the string is created
+  // 👇 Can use the Spread Operator AKA Rest Parameter in the arugments if you are unsure how many arguments will be passed into the function
   function highlight(strings, ...values) {
+    // debugger
     let str = '';
     strings.forEach((string, i) => {
       str += `${string} <span contenteditable class="hl">${values[i] || ''}</span>`;
@@ -22,6 +25,7 @@
   const name = 'Snickers';
   const age = 100;
 
+  // 👇 This is the "tagged" template literal
   const sentence = highlight`My dog's name is ${name} and he is ${age} years old`;
   document.body.innerHTML = sentence;
   console.log(sentence);

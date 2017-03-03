@@ -6,17 +6,21 @@
 </head>
 <body>
 <script>
+  // joining values of newInventors arrays onto inventors array
   const inventors = ['Einstein', 'Newton', 'Galileo'];
   const newInventors = ['Musk', 'Jobs'];
+
+  // inventors.push.apply(inventors, newInventors);
   inventors.push(...newInventors);
   console.log(inventors);
 
-  const name = ['Wes', 'Bos'];
+  const name = ['Jiminy', 'Cricket'];
 
   function sayHi(first, last) {
     alert(`Hey there ${first} ${last}`);
   }
 
+  // 🔥🔥🔥
   sayHi(...name);
 
 </script>

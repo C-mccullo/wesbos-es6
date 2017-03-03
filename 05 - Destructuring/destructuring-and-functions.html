@@ -16,12 +16,23 @@
     return converted;
   }
 
+  // const hundo = convertCurrency(100);
+  // console.log(hundo.AUD);
+  // console.log(hundo.MEX);
+
+  // 👇 Using destructuring when immediately getting return from function
+  const { USD, GPD, AUD } = convertCurrency(100);
+  
+
+  // When the object is passed into tipCalc function it will destructure the object values into independent variables 
   function tipCalc({ total = 100, tip = 0.15, tax = 0.13 } = {}) {
     return total + (tip * total) + (tax * total);
   }
 
-  const bill = tipCalc({ tip: 0.20, total: 200 });
+  const bill = tipCalc({ total: 200, tip: 0.20 });
   console.log(bill);
+
+  const empty = tipCalc(); 
 
 </script>
 </body>

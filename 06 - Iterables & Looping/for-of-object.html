@@ -13,6 +13,13 @@
     weight: 50,
     sugar: 10
   };
+  // cannot use for-of loop to iterate over object, here are some options
+
+  for ( const prop of Object.keys(apple) ) {
+    const value = apple[prop]
+    console.log("%c for-of loop", "color: green");
+    console.log(prop, value);
+  }
 
   for (const prop in apple) {
     const value = apple[prop];

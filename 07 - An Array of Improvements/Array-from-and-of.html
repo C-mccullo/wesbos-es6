@@ -11,22 +11,29 @@
   </div>
 <body>
 <script>
-  // const people = document.querySelectorAll('.people p');
-  // const peopleArray = Array.from(people, person => {
-  //   console.log(person);
-  //   return person.textContent;
-  // });
-  // console.log(peopleArray);
+  const people = document.querySelectorAll('.people p');
 
-  // // const names = people.map(person => person.textContent);
+  // const peopleArray = Array.from(people);
+  // const names = peopleArray.map( person => person.textContent );
 
+  const peopleArray = Array.from(people, person => {
+    // this "person" is the actual DOM node
+    console.log(person);
+    return person.textContent;
+  });
+  console.log(peopleArray);
+
+  // const names = people.map(person => person.textContent);
+  
+  // sumAll function using reduce
   function sumAll() {
     const nums = Array.from(arguments);
     return nums.reduce((prev, next) => prev + next, 0);
   }
 
   sumAll(2, 34, 23, 234, 234, 234234, 234234, 2342);
-
+  
+  // Array.of will create an array from all of the arguments passed to it.
   const ages = Array.of(12,4,23,62,34);
   console.log(ages);
 

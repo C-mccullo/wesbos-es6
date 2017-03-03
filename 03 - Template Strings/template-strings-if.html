@@ -11,10 +11,10 @@
     artist: 'Tupac',
     featuring: 'Biggie Smalls'
   };
-
   const markup = `
     <div class="song">
       <p>
+        ${/* Using a ternary operator in template string for conditional markup */}
         ${song.name} — ${song.artist}
         ${song.featuring ? `(Featuring ${song.featuring})` : ''}
       </p>

@@ -6,6 +6,9 @@
 </head>
 <body>
 <script>
+
+  // Destructuring is a way of extracting multiple desired values from objects and arrays using an "object pattern" (It can be uesful with processing return values from functions, works for all iterable values). 
+
   const person = {
     first: 'Wes',
     last: 'Bos',
@@ -13,7 +16,7 @@
     city: 'Hamilton',
     twitter: '@wesbos'
   };
-
+  // destructuring syntax
   const { first, last, twitter } = person;
 
   const wes = {
@@ -33,6 +36,7 @@
   const { twitter: tweet, facebook: fb } = wes.links.social;
 
   const settings = { width: 300, color: 'black' }  // height, fontSize
+  // height and fontSize have not been added to settings object so can add a default value for the new variables
   const { width = 100, height = 100, color = 'blue', fontSize = 25} = settings;
 
 </script>

@@ -10,7 +10,13 @@
   const featured = ['Deep Dish', 'Pepperoni', 'Hawaiian'];
   const specialty = ['Meatzza', 'Spicy Mama', 'Margherita'];
 
+  // spread operator will take every item inside of an "iterable" (string, array, object)
   const pizzas = [...featured, 'veg', ...specialty];
+  console.log(pizzas);
+  // making fridayPizzas a reference to the pizzas array with end up overwriting the original array when you replace values in fridayPizzas. 
+  // const fridayPizzas = pizzas
+
+  // so... you can use spread instead
   const fridayPizzas = [...pizzas];
 
   const deepDish = {

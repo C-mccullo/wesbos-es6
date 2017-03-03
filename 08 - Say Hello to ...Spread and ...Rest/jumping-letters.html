@@ -30,7 +30,16 @@
   <h2 class="jump">SPREADS!</h2>
 
 <script>
+  // use map, a spread, and queryselector
+  const header = document.querySelector(".jump");
   
+  // wrap every char in a span and inject back into h2
+  function spanWrap(letters) {
+    return [...letters].map( letter => `<span>${letter}</span>`).join('');
+  }
+
+  const spans = spanWrap(header.textContent);
+  header.innerHTML = spanWrap(header.textContent);
 </script>
 </body>
 </html>

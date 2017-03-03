@@ -34,10 +34,13 @@
   //   }
   // });
 
+  // for in loop will iterate over anything that is added to the cuts array (added string values, functions, objects)
+
   // for (const index in cuts) {
   //   console.log(cuts[index]);
   // }
 
+  // for-of loop can be used for iterating over any type of data EXCEPT for objects
   for (const cut of cuts) {
     if(cut === 'Brisket') {
       continue;

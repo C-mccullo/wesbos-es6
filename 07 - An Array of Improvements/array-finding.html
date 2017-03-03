@@ -178,8 +178,10 @@
      }
   ];
   const code = 'VBgtGQcSf';
+  // .find() will loop over every post (returning a boolean) until it finds the one that satisfies the condition
   const post = posts.find(post => post.code === code);
-
+  console.log(post);
+  
   const postIndex = posts.findIndex(post => post.code === code);
   console.log(postIndex);
 

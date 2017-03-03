@@ -6,6 +6,7 @@
 </head>
 <body>
 <script>
+
   const first = 'snickers';
   const last = 'bos';
   const age = 2;
@@ -19,6 +20,18 @@
   };
   console.log(dog);
 
+  
+  // const modal = {
+  //   create: function(selector) {
+
+  //   },
+  //   open: function(content) {
+
+  //   },
+  //   close: function(goodbye) {
+
+  //   }
+  // }
   const modal = {
     create(selector) {
 
@@ -31,10 +44,13 @@
     }
   }
 
+  // 🔥🔥🔥🔥
   function invertColor(color) {
       return '#' + ("000000" + (0xFFFFFF ^ parseInt(color.substring(1),16)).toString(16)).slice(-6);
   }
+  
 
+  // COMPUTED PROPERTY KEYS
   const key = 'pocketColor';
   const value = '#ffc600';
 
@@ -42,10 +58,12 @@
     [key]: value,
     [`${key}Opposite`]: invertColor(value)
   };
+  console.log(tShirt);
 
   const keys = ['size', 'color', 'weight'];
   const values = ['medium', 'red', 100];
-
+  
+  // 😲😲
   const shirt = {
     [keys.shift()]: values.shift(),
     [keys.shift()]: values.shift(),
