@@ -6,9 +6,10 @@
 </head>
 <body>
 <script>
+  // Promise constructor give one function which will take "resolve and reject" arguments. When data is returned, it is resolved. When an error occurs in the request, it is rejected. 
   const p = new Promise((resolve, reject) => {
     setTimeout(() => {
-      reject(Error('Err wes isn\'t cool'));
+      reject(Error('Err, where\'s my data?'));
     }, 1000);
   });
 

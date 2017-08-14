@@ -6,8 +6,10 @@
 </head>
 <body>
 <script>
+// fetch will return a promise, not the actual data
 const postsPromise = fetch('http://wesbos.com/wp-json/wp/v2/posts');
 
+// .then() only fires when data is sucessfully returned, .catch() is used to catch any errors that will occur during the fetch request
 postsPromise
   .then(data => data.json())
   .then(data => { console.log(data) })

@@ -21,12 +21,13 @@
   function getPostById(id) {
     // create a new promise
     return new Promise((resolve, reject) => {
-      // using a settimeout to mimick a databse
+      // using a setTimeout to mimic a database 😈😈😈
       setTimeout(() => {
         // find the post we want
         const post = posts.find(post => post.id === id);
         if(post) {
           resolve(post); // send the post back
+          console.log("post is good!");
         } else {
           reject(Error('No Post Was Found!'));
         }
@@ -49,7 +50,7 @@
     });
   }
 
-  getPostById(3)
+  getPostById(4)
     .then(post => {
       return hydrateAuthor(post);
     })

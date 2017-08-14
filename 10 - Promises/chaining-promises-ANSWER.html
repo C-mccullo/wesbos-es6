@@ -25,10 +25,11 @@
         const post = posts.find(post => post.id === id);
         if(post) {
           resolve(post);
+          console.log("post is good!")
         } else {
           reject(Error('Post not found!'));
         }
-      },200);
+      },800);
     });
   }
 
@@ -42,13 +43,14 @@
         } else {
           reject(Error('Author not Found!'));
         }
-      }, 200);
+      }, 700);
     });
   }
 
-  getPostById(1)
+  getPostById(3)
     .then(post => {
       return hydrateAuthor(post);
+      console.log("")
     })
     .then(author => {
       console.log(author);
